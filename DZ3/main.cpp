@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <math.h>
 
-int main(){
+int main()
+{
     double r;
     double a;
     double d;
-    double aa;
-    double bb;
-    double ss;
 
     printf("Enter r = ");
     scanf( "%if", &r );
@@ -16,13 +14,17 @@ int main(){
     printf( "Enter d = " );
     scanf( "%if", &d );
 
-    aa=3.1416*r*r;
-    bb=sqrt(3)/4*a*a;
-    ss=d*d;
+    double aa = 0;
+    double bb = 0;
+    double ss = 0;
 
-    (aa>bb)?((aa>ss)?printf( " Square circle more \n" ) // Площадь круга больше
-                   :printf( " Square box more \n" ) )// Площадь квадрата больше
-                   :( ( bb>ss ) ? printf ( "Square triangle more \n" )
-                                  // Площадь треугольника больше
-                   : printf( "Square box more \n" ) );// Площадь квадрата больше
-    }
+    aa = M_PI * r * r;
+    bb= sqrt (3) / 4 * a * a;
+    ss = d * d;
+
+ ( aa > bb ) ? ( ( aa > ss )
+    ? printf( " Square circle more \n" ) // Площадь круга больше
+    :printf( " Square box more \n" ) )// Площадь квадрата больше
+    :( ( bb > ss ) ? printf ( "Square triangle more \n" ) // Площадь треугольника больше
+    : printf( "Square box more \n" ) );// Площадь квадрата больше
+}
