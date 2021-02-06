@@ -14,13 +14,9 @@ int main()
     printf( "Enter d = " );
     scanf( "%if", &d );
 
-    double aa = 0;
-    double bb = 0;
-    double ss = 0;
-
-    aa = M_PI * r * r;
-    bb= sqrt (3) / 4 * a * a;
-    ss = d * d;
+    double aa = M_PI * r * r;
+    double bb= sqrt (3) / 4 * a * a;
+    double ss = d * d;
 
  ( aa > bb ) ? ( ( aa > ss )
     ? printf( " Square circle more \n" ) // Площадь круга больше
