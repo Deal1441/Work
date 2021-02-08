@@ -12,7 +12,7 @@ int main()
   printf("Enter a line:");
   scanf( "%s", str );
 
-  for (int i = 0; i < 12; ++i)
+  for (int i = 0; i < SIZE; ++i)
   {
     if (str[i] == '(')
   {
