@@ -2,34 +2,39 @@
 #include <stdlib.h>
 #include <time.h>
 
-
 int main()
 {
-    constexpr int SIZE = 40;
-    int M[SIZE];
-    int M_arr[SIZE] = {};
-    int i = 0;
-    int min = 0;
-    int max = 0;
-    int b = 0;
-
-    srand( time (NULL) );
-    min = 0;
-    max = 0;
-    for ( i = 0; i < SIZE; ++i )
-    {
-        M_arr[i] = rand() % 201 - 100 ;
-        printf("%d ", M_arr[i]);
-        if (M_arr[i] < M_arr[min]) min = i;
-        if (M_arr[i] > M_arr[max]) max = i;
-    }
-
-    printf( "\n" );
-    printf( "arr[%d]=%d arr[%d]=%d\n", min+1, M_arr[min], max+1, M_arr[max] );
-    b = M_arr[min];
-    M_arr[min] = M_arr[max];
-    M_arr[max] = b;
-    for ( i=0; i < SIZE; ++i )
-    printf("%d ", M_arr[i]);
+   srand ( time(0) );
+   int sizeA = 30, sizeB = 15;
+   int masA [sizeA], masB [sizeB];
+   bool a;
+   for( int i = 0; i < sizeA; ++i )
+   {
+    masA[i] = rand () % ( 210-100 );
+    printf( "%d ", masB[i] );
+   }
     printf("\n");
+    for( int i = 0; i < sizeB; ++i )
+   {
+     masB[i] = rand() % ( 2100-1000 );
+     printf("%d ", masB[i]);
+   }
+    printf( "\n" );
+    for(int i=0; i < sizeA; ++i )
+   {
+     for( int j=0; j < sizeB; ++j )
+   {
+     if( masA[i] != masB[j] )
+     a = 1;
+     else
+     printf( "\n" );
+   {
+       a = 0;
+       break;
+   }
+   }
+     if( a == 1 )
+     printf( "%d ", i );
+    }
+    return 0;
 }
